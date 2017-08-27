@@ -14,6 +14,7 @@ export default class In extends Component{
 
   handleSubmit(e){
     this.props.add(this.state.value);
+    this.setState({value: ''});
     e.preventDefault();
   }
 

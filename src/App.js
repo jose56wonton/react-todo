@@ -25,7 +25,9 @@ class App extends Component {
     }
   }
   onDelete(name){
-    const items = this.state.items.filter(item => item == name);
+    const items = this.state.items.filter(function(el){
+      return el.item !== name;
+    });
     this.setState({items});
   }
 
